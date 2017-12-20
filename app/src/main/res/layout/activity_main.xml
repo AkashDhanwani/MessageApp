@@ -1,9 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.akash.messageapp.MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/etText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp"
+        android:padding="12dp"
+        android:lines="5"
+        android:hint="Enter Text"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnWasp"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etText"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="71dp"
+        android:text="WhatsApp" />
+
+    <Button
+        android:id="@+id/btnEmail"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnWasp"
+        android:layout_alignBottom="@+id/btnWasp"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/btnWasp"
+        android:text="Email" />
+
+    <Button
+        android:id="@+id/btnSms"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnEmail"
+        android:layout_alignBottom="@+id/btnEmail"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/btnEmail"
+        android:text="SMS" />
+</RelativeLayout>
